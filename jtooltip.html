@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>tooltip demo</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+</head>
+<body>
+<p>
+    <a href="#" title="<h1>Anchor</h1> description">Anchor text</a>
+</p>
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $( document ).tooltip({
+        content: function () {
+            return $(this).prop('title');
+        }
+    });
+</script>
+
+</body>
+</html>
